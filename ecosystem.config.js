@@ -14,7 +14,6 @@ module.exports = {
     script: './backend/build/app.js',
   }],
 
-  // Настройка деплоя
   deploy: {
     production: {
       user: DEPLOY_USER,
