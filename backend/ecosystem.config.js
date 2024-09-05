@@ -25,7 +25,7 @@ module.exports = {
 			repo: DEPLOY_REPO,
 			path: DEPLOY_PATH,
 			"pre-deploy": `scp ./.env* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-			"post-deploy": `cd ${DEPLOY_FOLDER} && npm i && npm run build && pm2 restart ecosystem.config.js`
+			"post-deploy": `cd ~${DEPLOY_FOLDER} && npm i && npm run build && pm2 restart ecosystem.config.js`
 		}
 	}
 };
